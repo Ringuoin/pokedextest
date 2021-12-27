@@ -1,11 +1,14 @@
-
+import React, {Component} from 'react';
 import './App.css';
-import Barre from './components/layout/Barre';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Misenpage from './components/layout/Misenpage';
+
+
+
 function App() {
   return (
     <div className="App">
-      test
-      <Barre />
+      <div className='container'><Misenpage></Misenpage></div>
     </div>
   );
 }
