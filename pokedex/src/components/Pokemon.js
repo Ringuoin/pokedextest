@@ -35,6 +35,12 @@ const Pokemon = (props) => {
                     <div className="Vitesse">
                         Vit : {pokemon.stats[5].base_stat}
                     </div>
+                    <div className="Poids">
+                        Vit : {pokemon.weight}
+                    </div>
+                    <div className="Taille">
+                        Vit : {pokemon.height}
+                    </div>
                 </div>
             </div>
         </div>
