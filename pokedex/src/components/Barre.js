@@ -31,10 +31,17 @@ const Barre = () => {
             </div>
             <div>
                 {pokemon &&
-                <div>
-                    <div>Nom : {pokemon.name}</div>
+                <div className = "Recherche">
+                    <div>{pokemon.name}</div>
+                    <img src={pokemon.sprites.front_default}/>
+                    <div>Type : {pokemon.types[0].type.name}</div>
+                    <div>HP : {pokemon.stats[0].base_stat}</div>
+                    <div>Attaque : {pokemon.stats[1].base_stat}</div>
+                    <div>Defense : {pokemon.stats[2].base_stat}</div>
+                    <div>Attaque Speciale : {pokemon.stats[3].base_stat}</div>
+                    <div>Defense Speciale : {pokemon.stats[4].base_stat}</div>
+                    <div>Vitesse : {pokemon.stats[5].base_stat}</div>
                     <div>Poids : {pokemon.weight}</div>
-                    <img src={pokemon}/>
                 </div>
                 }
             </div>
