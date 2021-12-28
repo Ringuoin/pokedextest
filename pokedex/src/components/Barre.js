@@ -42,6 +42,7 @@ const Barre = () => {
                     <div>Defense Speciale : {pokemon.stats[4].base_stat}</div>
                     <div>Vitesse : {pokemon.stats[5].base_stat}</div>
                     <div>Poids : {pokemon.weight}</div>
+                    <div>Taille : {pokemon.height}</div>
                 </div>
                 }
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Barre from "./components/Barre";
 import Pokedex from './components/Pokedex';
-import { getPokemons } from './api';
+import { getPokemonData, getPokemons } from './api';
 
 const {useState, useEffect} = React;
 
@@ -12,7 +12,13 @@ export default function App() {
   const fetchPokemons = async () => {
     try {
       const data = await getPokemons();
-      setPokemons(data.results);
+      console.log(data.results);
+      const promises = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url)
+
+      });
+      const results = await Promise.all(promises)
+      setPokemons(results)
     } catch(err){}
   }
 
