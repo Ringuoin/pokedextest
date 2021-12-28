@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
+import Barre from "./components/Barre";
 
 
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <div className='container'><Misenpage></Misenpage></div>
+    <div>
+      <div className='App'>
+        <Barre />
+      </div>
     </div>
   );
 }
-
-export default App;
